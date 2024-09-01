@@ -34,7 +34,6 @@
     <div class="bg-white shadow-lg py-4">
         <div class="max-w-6xl mx-auto flex justify-between items-center px-4">
             <div class="flex items-center space-x-4">
-                <!-- <div class="text-red-500 text-lg font-bold">9:53</div> -->
                 <div class="bg-gray-200 rounded-full p-2">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16" />
@@ -56,14 +55,14 @@
         <div class="flex items-center justify-between">
             <div class="text-2xl font-bold">Welcome Back, Timothy Merrit Jackson.</div>
             <div class="flex items-center space-x-4">
-                <span class="text-gray-500 text-sm">Saturday 27th of August 2024</span>
+                <span class="text-gray-500 text-sm" id="current-date"></span>
             </div>
         </div>
 
         <!-- Account Balance -->
         <div class="mt-6">
-            <h2 class="text-lg font-semibold text-gray-700">Account Balance: <span class="text-black text-xl">$1,000,000.00</span></h2>
-            <h2 class="text-lg font-semibold text-gray-500">Ledger Balance: <span class="text-black text-xl">$1,000,000.00</span></h2>
+            <h2 class="text-lg font-semibold text-gray-700">Account Balance: <span class="text-black text-xl">$2,000,000,000.00</span></h2>
+            <h2 class="text-lg font-semibold text-gray-500">Ledger Balance: <span class="text-black text-xl">$2,000,000,000.00</span></h2>
         </div>
 
         <!-- Account Summary -->
@@ -75,7 +74,7 @@
                     <span class="main-account-badge">Main Account</span>
                     <h3 class="text-gray-600">Checking Account</h3>
                     <p class="text-sm text-gray-400">Account No: 843001638</p>
-                    <h2 class="text-xl font-semibold mt-4">Acct Balance: $1,000,000.00</h2>
+                    <h2 class="text-xl font-semibold mt-4" style="font-size: 14px;">Acct Balance: $2,000,000,000.00</h2>
                     <p class="text-sm text-gray-500 mt-2">Total Spend: $50,000.00</p>
                 </div>
 
@@ -97,7 +96,7 @@
                     <h3 class="text-gray-600">Messages</h3>
                     <p class="text-sm text-gray-500 mt-2"><span class="text-green-500">●</span> 0 New Message(s)</p>
                     <p class="text-sm text-gray-500 mt-2">Last Login</p>
-                    <p class="text-sm text-gray-400 mt-1">2023/05/27</p>
+                    <p class="text-sm text-gray-400 mt-1" id="last-login-date"></p>
                     <div class="custom-button mt-2">View Login Date</div>
                 </div>
             </div>
@@ -107,7 +106,33 @@
     <!-- Footer -->
     <div class="bg-gray-900 text-white mt-8 p-6">
         <p class="text-center text-xs">This card is property of Trust World Bank Finance Bank. Misuse is a criminal offence. If found, please return to Trust World Bank Online Finance Bank or to the nearest bank.</p>
-        <p class="text-center text-sm mt-2">trustworldbank.com</p>
+        <p class="text-center text-sm mt-2">https://trustworldbank.onrender.com</p>
     </div>
+
+    <script>
+        // Function to format date as 'Saturday 27th of August 2024'
+        function formatDate(date) {
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            return date.toLocaleDateString('en-US', options);
+        }
+
+        // Function to format the last login date as 'YYYY/MM/DD'
+        function formatLastLoginDate(date) {
+            const year = date.getFullYear();
+            const month = String(date.getMonth() + 1).padStart(2, '0');
+            const day = String(date.getDate()).padStart(2, '0');
+            return `${year}/${month}/${day}`;
+        }
+
+        // Get the current date
+        const currentDate = new Date();
+        
+        // Set the formatted current date in the span with id 'current-date'
+        document.getElementById('current-date').textContent = formatDate(currentDate);
+
+        // Example of setting a last login date
+        const lastLoginDate = new Date('2023-05-27');
+        document.getElementById('last-login-date').textContent = formatLastLoginDate(lastLoginDate);
+    </script>
 </body>
 </html>
