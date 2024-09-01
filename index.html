@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trust World Bank</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .main-account-badge {
+            background-color: #f9a826;
+            color: white;
+            padding: 0.2rem 0.5rem;
+            border-radius: 0.5rem;
+            font-size: 0.75rem;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+        }
+        .custom-button {
+            background-color: #f9a826;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            margin-top: 1rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-w-full min-h-screen py-8">
+
+    <!-- Top Navigation Bar -->
+    <div class="bg-white shadow-lg py-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center px-4">
+            <div class="flex items-center space-x-4">
+                <!-- <div class="text-red-500 text-lg font-bold">9:53</div> -->
+                <div class="bg-gray-200 rounded-full p-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+                    </svg>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.586V11a2.012 2.012 0 00-2.005-2.001A2.005 2.005 0 0014 11v3.586c0 .52-.203 1.023-.586 1.414L12 17h-1m4 0V10.5a4.5 4.5 0 00-9 0V17" />
+                </svg>
+                <img src="./3d-illustration-human-avatar-profile_23-2150671142.avif" alt="User Avatar" class="w-10 h-10 rounded-full">
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="max-w-6xl mx-auto bg-white rounded-2xl shadow-lg p-6 mt-4">
+        <!-- Header -->
+        <div class="flex items-center justify-between">
+            <div class="text-2xl font-bold">Welcome Back, Timothy Merrit Jackson.</div>
+            <div class="flex items-center space-x-4">
+                <span class="text-gray-500 text-sm">Saturday 27th of August 2024</span>
+            </div>
+        </div>
+
+        <!-- Account Balance -->
+        <div class="mt-6">
+            <h2 class="text-lg font-semibold text-gray-700">Account Balance: <span class="text-black text-xl">$1,000,000.00</span></h2>
+            <h2 class="text-lg font-semibold text-gray-500">Ledger Balance: <span class="text-black text-xl">$1,000,000.00</span></h2>
+        </div>
+
+        <!-- Account Summary -->
+        <div class="mt-8">
+            <h2 class="text-xl font-semibold text-gray-700">Account Summary</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
+                <!-- Account Card 1 -->
+                <div class="bg-white shadow-md rounded-xl p-4 relative">
+                    <span class="main-account-badge">Main Account</span>
+                    <h3 class="text-gray-600">Checking Account</h3>
+                    <p class="text-sm text-gray-400">Account No: 843001638</p>
+                    <h2 class="text-xl font-semibold mt-4">Acct Balance: $1,000,000.00</h2>
+                    <p class="text-sm text-gray-500 mt-2">Total Spend: $50,000.00</p>
+                </div>
+
+                <!-- Account Card 2 -->
+                <div class="bg-white shadow-md rounded-xl p-4 relative">
+                    <h3 class="text-gray-600">Make A Bank Transfer</h3>
+                    <div class="custom-button">Bank Transfer</div>
+                </div>
+
+                <!-- Account Card 3 -->
+                <div class="bg-white shadow-md rounded-xl p-4 relative">
+                    <h3 class="text-gray-600">View Bank Account Statement</h3>
+                    <div class="custom-button">View Bank Statement</div>
+                    <div class="custom-button mt-2">View Bank Account</div>
+                </div>
+
+                <!-- Messages Card -->
+                <div class="bg-white shadow-md rounded-xl p-4 relative col-span-2 md:col-span-1">
+                    <h3 class="text-gray-600">Messages</h3>
+                    <p class="text-sm text-gray-500 mt-2"><span class="text-green-500">●</span> 0 New Message(s)</p>
+                    <p class="text-sm text-gray-500 mt-2">Last Login</p>
+                    <p class="text-sm text-gray-400 mt-1">2023/05/27</p>
+                    <div class="custom-button mt-2">View Login Date</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="bg-gray-900 text-white mt-8 p-6">
+        <p class="text-center text-xs">This card is property of Trust World Bank Finance Bank. Misuse is a criminal offence. If found, please return to Trust World Bank Online Finance Bank or to the nearest bank.</p>
+        <p class="text-center text-sm mt-2">trustworldbank.com</p>
+    </div>
+</body>
+</html>
